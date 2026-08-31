@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — PDPA Egress Inspector</title>
+<style>
+:root{--ink:#0F272B;--fg:#DFEAE8;--dim:#93B0B0;--go:#2FB3A0;--line:#27585F}
+body{margin:0;background:var(--ink);color:var(--fg);
+  font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:44rem;margin:0 auto;padding:56px 22px 96px}
+h1{font-size:30px;line-height:1.2;margin:0 0 6px;letter-spacing:-.015em}
+h2{font-size:19px;margin:38px 0 10px}
+p,li{color:var(--dim)}
+p{margin:0 0 14px}
+ul{padding-left:20px;margin:0 0 14px}
+li{margin-bottom:7px}
+strong{color:var(--fg);font-weight:600}
+a{color:var(--go)}
+.meta{color:var(--dim);font-size:14px;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:8px}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--dim)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy policy</h1>
+  <p class="meta">PDPA Egress Inspector, a Chrome extension. Last updated 31 August 2026.</p>
+
+  <h2>The short version</h2>
+  <p>This extension sends nothing anywhere. It has no server, makes no network requests, and
+     contains no analytics, telemetry or advertising code. Everything it reads stays on your
+     computer, and the values it records are masked before they are stored.</p>
+
+  <h2>What the extension reads</h2>
+  <p>On sites you have explicitly added, and only on those sites, it examines:</p>
+  <ul>
+    <li>text you paste into a field</li>
+    <li>text you type into a field, a short moment after you stop typing</li>
+    <li>text you copy or cut from the page</li>
+    <li>the contents of plain-text files you attach (.txt, .csv, .json, .log, .sql and similar),
+        and the filename and size only of other formats</li>
+    <li>the values of a form at the moment you submit it</li>
+  </ul>
+  <p>Password fields are skipped entirely and are never read. No site is examined until you add
+     it in the extension's settings, at which point Chrome asks you to grant access to that one
+     site. Removing the site withdraws that access immediately.</p>
+
+  <h2>What is stored, and where</h2>
+  <p>All storage is Chrome's own extension storage on your device.</p>
+  <ul>
+    <li><strong>Settings</strong> — the sites you added, your policy choice, your internal
+        hostnames. Stored in <code>chrome.storage.sync</code>, which means Chrome may sync them
+        between your own signed-in browsers, under Google's terms rather than ours.</li>
+    <li><strong>Findings log</strong> — up to 500 recent events, stored in
+        <code>chrome.storage.local</code>, which never syncs and never leaves the device.
+        Each event records the time, the hostname, the page path (never the query string), the
+        channel, the destination category, a risk score, and which categories were detected.</li>
+  </ul>
+  <p>Detected values are <strong>masked at the point of detection</strong>, inside the tab, before
+     anything is handed to the rest of the extension. A National Identity Card number recorded as
+     <code>923451234V</code> is stored as <code>92••••••4V</code>. The full value is never written
+     to storage and never held after the check completes.</p>
+
+  <h2>What is never collected</h2>
+  <ul>
+    <li>Nothing is transmitted to the developer or to any third party, because nothing is
+        transmitted at all.</li>
+    <li>No browsing history, no page contents, and no data from sites you have not added.</li>
+    <li>No account, sign-in, email address or device identifier. The extension does not know who
+        you are.</li>
+    <li>No data is sold, transferred or used for advertising, credit assessment or lending.</li>
+  </ul>
+
+  <h2>Your control</h2>
+  <ul>
+    <li>Remove a site in settings and inspection of it stops at once, along with Chrome's
+        permission for it.</li>
+    <li>Pause the inspector entirely from settings without removing any site.</li>
+    <li>Clear the findings log at any time from the popup or from settings.</li>
+    <li>Uninstalling the extension deletes its local storage, including the whole log.</li>
+  </ul>
+
+  <h2>If you deploy this to a team</h2>
+  <p>Running this extension on staff browsers is itself the processing of personal data, and the
+     organisation that deploys it is the controller of that processing. Tell staff in writing
+     before deployment, record your lawful basis, and decide in advance who may read the log.
+     The log is masked precisely so that reviewing it does not require access to the underlying
+     personal data.</p>
+
+  <h2>Children</h2>
+  <p>This is a workplace compliance tool and is not directed at children. It collects nothing from
+     anyone, including children.</p>
+
+  <h2>Changes</h2>
+  <p>If a future version changes what is read or stored, this page will be updated before that
+     version is published, and the date at the top will change.</p>
+
+  <h2>Contact</h2>
+  <p>Ashen Wijesingha — <a href="mailto:TODO@example.com">TODO@example.com</a></p>
+
+  <footer>
+    This policy describes the extension's data handling. It is not legal advice about your own
+    obligations under the Personal Data Protection Act No. 9 of 2022.
+  </footer>
+</main>
+</body>
+</html>
